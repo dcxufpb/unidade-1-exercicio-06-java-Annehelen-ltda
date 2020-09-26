@@ -46,17 +46,17 @@ public class CupomFiscal {
 		if(INSCRICAO_ESTADUAL.equals("")){
 			throw new RuntimeException("O campo inscrição estadual da loja é obrigatório");
 		}
-		var part2 = LOGRADOURO + ", " + num;
+		String part2 = LOGRADOURO + ", " + num;
 		if (! isEmpty (COMPLEMENTO)){
 			part2 += " " + COMPLEMENTO;
 			}
-		var part3 = "";
+		String part3 = "";
 		if (! isEmpty (BAIRRO)){
 			part3 += BAIRRO + " - ";
 		}
 		part3 += MUNICIPIO + " - " + ESTADO;
 		
-		var part4 = "";
+		String part4 = "";
 		if (! isEmpty (CEP)){
 			part4 = "CEP:" + CEP;
 			}
@@ -69,7 +69,7 @@ public class CupomFiscal {
 		if (! isEmpty(part4)){
 			part4 += ENDLN;
 			}
-		var part5 = "";
+		String part5 = "";
 		if (! isEmpty (OBSERVACAO)){
 			part5 += OBSERVACAO;
 			}
